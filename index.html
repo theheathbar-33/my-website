@@ -3,177 +3,433 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Heather Apse — B2B SaaS Content Marketing Leader</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<title>Heather Apse — Growth Content Operator</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-  :root { --ink: #0d1b2e; --paper: #f0f3f7; --accent: #1a56db; --accent-dark: #0f3a99; --muted: #5a6a80; --rule: rgba(13,27,46,0.12); }
-  body { background: var(--paper); color: var(--ink); font-family: 'DM Sans', sans-serif; font-weight: 300; min-height: 100vh; overflow-x: hidden; }
-  .masthead { border-bottom: 3px double var(--ink); padding: 1.25rem 2.5rem 1rem; display: flex; align-items: flex-end; justify-content: space-between; gap: 1rem; }
-  .masthead-name { font-family: 'Playfair Display', serif; font-size: clamp(2.8rem, 6vw, 5.5rem); font-weight: 900; letter-spacing: -0.02em; line-height: 0.9; text-transform: uppercase; }
-  .masthead-name span { color: var(--accent); font-style: italic; }
-  .masthead-meta { text-align: right; color: var(--muted); line-height: 1.9; white-space: nowrap; }
-  .masthead-meta .role { font-size: 0.68rem; font-weight: 500; color: var(--ink); letter-spacing: 0.08em; text-transform: uppercase; }
-  .masthead-meta .tagline { font-size: 0.6rem; color: var(--muted); font-style: italic; }
-  .masthead-meta .avail { font-size: 0.65rem; letter-spacing: 0.15em; color: var(--accent); font-weight: 500; text-transform: uppercase; }
-  .ticker { background: var(--ink); color: var(--paper); font-size: 0.65rem; letter-spacing: 0.14em; text-transform: uppercase; padding: 0.45rem 2.5rem; display: flex; align-items: center; overflow: hidden; white-space: nowrap; }
-  .ticker-inner { animation: scroll 28s linear infinite; display: flex; gap: 3rem; }
-  .ticker-inner span::before { content: "◆  "; color: #4a7de8; }
-  @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-  nav { padding: 0.6rem 2.5rem; border-bottom: 1px solid var(--ink); display: flex; gap: 2rem; align-items: center; }
-  nav a { font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--ink); text-decoration: none; font-weight: 500; transition: color 0.15s; }
-  nav a:hover { color: var(--accent); }
-  nav .cta { margin-left: auto; background: var(--accent); color: #fff; padding: 0.35rem 1rem; font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; font-weight: 500; text-decoration: none; }
-  nav .cta:hover { background: var(--accent-dark); }
-  .hero { display: grid; grid-template-columns: 1.6fr 1fr; border-bottom: 1px solid var(--ink); }
-  .hero-lead { padding: 2.5rem; border-right: 1px solid var(--ink); }
-  .label { font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); font-weight: 500; margin-bottom: 0.6rem; display: block; }
-  .hero-headline { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 700; line-height: 1.1; margin-bottom: 1rem; }
-  .hero-headline em { font-style: italic; color: var(--accent); }
-  .hero-deck { font-size: 1rem; color: var(--muted); line-height: 1.7; max-width: 38ch; margin-bottom: 1.5rem; font-weight: 300; }
-  .btn-read { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; font-weight: 500; border-bottom: 1.5px solid var(--ink); padding-bottom: 0.1rem; text-decoration: none; color: var(--ink); }
-  .btn-read:hover { color: var(--accent); border-color: var(--accent); }
-  .hero-sidebar { padding: 2rem; }
-  .sidebar-bio { font-size: 0.82rem; color: var(--muted); line-height: 1.8; margin-bottom: 1.5rem; }
-  .stat-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--rule); border: 1px solid var(--rule); margin-bottom: 1.5rem; }
-  .stat { background: var(--paper); padding: 0.8rem 1rem; text-align: center; }
-  .stat-num { font-family: 'Playfair Display', serif; font-size: 1.8rem; font-weight: 900; display: block; line-height: 1; }
-  .stat-label { font-size: 0.6rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); margin-top: 0.2rem; display: block; }
-  .topics { display: flex; flex-direction: column; gap: 0.4rem; }
-  .topic { font-size: 0.58rem; letter-spacing: 0.08em; text-transform: uppercase; border: 1px solid var(--ink); padding: 0.28rem 0.65rem; color: var(--ink); white-space: nowrap; display: inline-block; align-self: flex-start; }
-  .section-head { display: flex; align-items: center; gap: 1rem; padding: 1rem 2.5rem 0.6rem; border-bottom: 1px solid var(--ink); }
-  .section-head h2 { font-size: 0.65rem; letter-spacing: 0.25em; text-transform: uppercase; font-weight: 500; }
-  .section-line { flex: 1; height: 1px; background: var(--rule); }
-  .articles { display: grid; grid-template-columns: repeat(3, 1fr); border-bottom: 1px solid var(--ink); }
-  .article-card { padding: 1.5rem 1.5rem 1.2rem; border-right: 1px solid var(--rule); transition: background 0.15s; display: flex; flex-direction: column; }
-  .article-card:last-child { border-right: none; }
-  .article-card:hover { background: rgba(26,86,219,0.05); }
-  .article-num { font-family: 'Playfair Display', serif; font-size: 2.5rem; font-weight: 900; color: var(--rule); line-height: 1; margin-bottom: 0.5rem; }
-  .article-tag { font-size: 0.58rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); font-weight: 500; margin-bottom: 0.4rem; }
-  .article-title { font-family: 'Playfair Display', serif; font-size: 1.05rem; font-weight: 700; line-height: 1.3; margin-bottom: 0.5rem; }
-  .article-excerpt { font-size: 0.78rem; color: var(--muted); line-height: 1.65; margin-bottom: 0.8rem; flex: 1; }
-  .article-link { font-size: 0.62rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); text-decoration: none; font-weight: 500; margin-bottom: 0.6rem; display: inline-block; border-bottom: 1px solid var(--accent); padding-bottom: 1px; }
-  .article-link:hover { opacity: 0.75; }
-  .article-meta { font-size: 0.6rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); display: flex; justify-content: space-between; border-top: 1px solid var(--rule); padding-top: 0.6rem; margin-top: auto; }
-  .testimonial-strip { padding: 2rem 2.5rem; border-bottom: 3px double var(--ink); display: grid; grid-template-columns: auto 1fr; gap: 2rem; align-items: start; }
-  .pull-quote-mark { font-family: 'Playfair Display', serif; font-size: 7rem; line-height: 0.6; color: var(--accent); font-weight: 900; }
-  .pull-quote { font-family: 'Playfair Display', serif; font-size: 0.95rem; font-style: italic; font-weight: 700; line-height: 1.65; margin-bottom: 0.75rem; }
-  .pull-attribution { font-size: 0.68rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); font-weight: 500; }
-  footer { padding: 1.5rem 2.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
-  .footer-name { font-family: 'Playfair Display', serif; font-weight: 900; font-size: 1rem; }
-  .footer-links { display: flex; gap: 1.5rem; }
-  .footer-links a { font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); text-decoration: none; }
-  .footer-links a:hover { color: var(--accent); }
-  .footer-copy { font-size: 0.65rem; color: var(--muted); }
+  *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+  :root { --ink:#0d1b2e; --paper:#f0f3f7; --accent:#1a56db; --accent-dark:#0f3a99; --muted:#5a6a80; --rule:rgba(13,27,46,0.1); --white:#ffffff; }
+  body { background:var(--paper); color:var(--ink); font-family:'DM Sans',sans-serif; font-weight:300; }
+
+  /* MASTHEAD */
+  .masthead { background:#fff; border-bottom:3px double var(--ink); padding:1.25rem 2.5rem 1rem; display:flex; align-items:flex-end; justify-content:space-between; gap:1rem; }
+  .masthead-name { font-family:'Playfair Display',serif; font-size:clamp(2.8rem,6vw,5.5rem); font-weight:900; letter-spacing:-0.02em; line-height:0.9; text-transform:uppercase; }
+  .masthead-name span { color:var(--accent); font-style:italic; }
+  .masthead-meta { text-align:right; color:var(--muted); line-height:1.9; white-space:nowrap; }
+  .masthead-meta .role { font-size:0.68rem; font-weight:500; color:var(--ink); letter-spacing:0.08em; text-transform:uppercase; }
+  .masthead-meta .tagline { font-size:0.6rem; color:var(--muted); font-style:italic; }
+  .masthead-meta .avail { font-size:0.65rem; letter-spacing:0.15em; color:var(--accent); font-weight:500; text-transform:uppercase; }
+
+  /* TICKER */
+  .ticker { background:var(--ink); color:#fff; font-size:0.65rem; letter-spacing:0.14em; text-transform:uppercase; padding:0.45rem 2.5rem; display:flex; align-items:center; overflow:hidden; white-space:nowrap; }
+  .ticker-inner { animation:scroll 28s linear infinite; display:flex; gap:3rem; }
+  .ticker-inner span::before { content:"◆  "; color:#6b9dfc; }
+  @keyframes scroll { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
+
+  /* NAV */
+  nav { background:#fff; padding:0.6rem 2.5rem; border-bottom:1px solid var(--ink); display:flex; gap:2rem; align-items:center; }
+  nav a { font-size:0.72rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--ink); text-decoration:none; font-weight:500; }
+  nav a:hover { color:var(--accent); }
+  nav .cta { margin-left:auto; background:var(--accent); color:#fff; padding:0.35rem 1rem; font-size:0.65rem; letter-spacing:0.15em; text-transform:uppercase; font-weight:500; text-decoration:none; }
+  nav .cta:hover { background:var(--accent-dark); }
+
+  /* HERO */
+  .hero { display:grid; grid-template-columns:1.5fr 1fr; }
+  .hero-lead { background:#fff; padding:3rem 2.5rem; border-right:1px solid var(--rule); }
+  .label { font-size:0.62rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--accent); font-weight:500; margin-bottom:0.75rem; display:block; }
+  .hero-headline { font-family:'Playfair Display',serif; font-size:clamp(2rem,4vw,3.4rem); font-weight:900; line-height:1.05; margin-bottom:1.2rem; }
+  .hero-headline em { font-style:italic; color:var(--accent); }
+  .hero-deck { font-size:0.95rem; color:var(--muted); line-height:1.8; max-width:42ch; margin-bottom:2rem; }
+  .btn-primary { display:inline-flex; align-items:center; gap:0.5rem; background:var(--accent); color:#fff; padding:0.7rem 1.5rem; font-size:0.7rem; letter-spacing:0.12em; text-transform:uppercase; font-weight:500; text-decoration:none; margin-right:0.75rem; }
+  .btn-primary:hover { background:var(--accent-dark); }
+  .btn-ghost { display:inline-flex; align-items:center; gap:0.4rem; font-size:0.7rem; letter-spacing:0.12em; text-transform:uppercase; font-weight:500; border-bottom:1.5px solid var(--ink); padding-bottom:0.1rem; text-decoration:none; color:var(--ink); }
+  .btn-ghost:hover { color:var(--accent); border-color:var(--accent); }
+
+  /* HERO SIDEBAR — dark */
+  .hero-sidebar { background:var(--ink); padding:3rem 2rem; }
+  .sidebar-label { font-size:0.58rem; letter-spacing:0.2em; text-transform:uppercase; color:rgba(240,243,247,0.5); font-weight:500; margin-bottom:1rem; border-bottom:1px solid rgba(255,255,255,0.1); padding-bottom:0.5rem; }
+  .stat-grid { display:grid; grid-template-columns:1fr 1fr; gap:1px; background:rgba(255,255,255,0.08); margin-bottom:1.5rem; }
+  .stat-box { background:rgba(255,255,255,0.04); padding:1.1rem 1rem; text-align:center; }
+  .stat-num { font-family:'Playfair Display',serif; font-size:2rem; font-weight:900; color:#fff; display:block; line-height:1; }
+  .stat-label { font-size:0.58rem; letter-spacing:0.12em; text-transform:uppercase; color:rgba(240,243,247,0.5); margin-top:0.3rem; display:block; }
+  .cap-list { list-style:none; }
+  .cap-item { display:flex; align-items:center; gap:0.6rem; padding:0.5rem 0; border-bottom:1px solid rgba(255,255,255,0.07); font-size:0.76rem; color:rgba(240,243,247,0.8); }
+  .cap-item:last-child { border-bottom:none; }
+  .cap-dot { width:5px; height:5px; border-radius:50%; background:#6b9dfc; flex-shrink:0; }
+
+  /* CAPABILITIES STRIP */
+  .capabilities { display:grid; grid-template-columns:repeat(3,1fr); border-bottom:1px solid var(--ink); }
+  .cap-block { background:#fff; padding:1.8rem 2rem; border-right:1px solid var(--rule); }
+  .cap-block:last-child { border-right:none; }
+  .cap-block:nth-child(even) { background:#f8f9fb; }
+  .cap-block-icon { font-size:1.5rem; margin-bottom:0.75rem; display:block; }
+  .cap-block-title { font-size:0.72rem; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:var(--ink); margin-bottom:0.5rem; }
+  .cap-block-desc { font-size:0.76rem; color:var(--muted); line-height:1.65; }
+
+  /* SECTION HEAD */
+  .section-head { display:flex; align-items:center; gap:1rem; padding:1rem 2.5rem 0.6rem; border-bottom:1px solid var(--ink); background:#edf0f5; }
+  .section-head.dark { background:var(--ink); }
+  .section-head.dark h2 { color:#fff; }
+  .section-head h2 { font-size:0.65rem; letter-spacing:0.25em; text-transform:uppercase; font-weight:500; white-space:nowrap; }
+  .section-line { flex:1; height:1px; background:var(--rule); }
+  .section-head.dark .section-line { background:rgba(255,255,255,0.15); }
+
+  /* FEATURED CARDS */
+  .featured-grid { display:grid; grid-template-columns:repeat(3,1fr); background:#e8ecf2; gap:1px; border-bottom:1px solid var(--ink); }
+  .featured-card { background:#fff; padding:1.8rem 1.5rem; display:flex; flex-direction:column; transition:box-shadow 0.2s, transform 0.2s; }
+  .featured-card:hover { box-shadow:0 6px 24px rgba(13,27,46,0.12); transform:translateY(-2px); position:relative; z-index:1; }
+  .card-type { font-size:0.56rem; letter-spacing:0.18em; text-transform:uppercase; color:var(--accent); font-weight:500; margin-bottom:0.4rem; }
+  .card-num { font-family:'Playfair Display',serif; font-size:2.5rem; font-weight:900; color:rgba(13,27,46,0.08); line-height:1; margin-bottom:0.4rem; }
+  .card-title { font-family:'Playfair Display',serif; font-size:1rem; font-weight:700; line-height:1.3; margin-bottom:0.5rem; }
+  .card-desc { font-size:0.76rem; color:var(--muted); line-height:1.65; flex:1; margin-bottom:0.8rem; }
+  .card-link { font-size:0.6rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--accent); text-decoration:none; font-weight:500; border-bottom:1px solid var(--accent); padding-bottom:1px; display:inline-block; margin-bottom:0.6rem; }
+  .card-link:hover { opacity:0.7; }
+  .card-meta { font-size:0.58rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted); border-top:1px solid var(--rule); padding-top:0.5rem; margin-top:auto; display:flex; justify-content:space-between; }
+
+  /* AI PERSPECTIVE */
+  .ai-perspective { background:#f0f3f7; border-bottom:3px double var(--ink); padding:2.5rem; display:grid; grid-template-columns:1.2fr 1fr; gap:3rem; align-items:start; }
+  .ai-perspective-label { font-size:0.62rem; letter-spacing:0.22em; text-transform:uppercase; color:var(--accent); font-weight:500; margin-bottom:0.75rem; display:block; }
+  .ai-perspective-headline { font-family:'Playfair Display',serif; font-size:1.6rem; font-weight:700; line-height:1.2; margin-bottom:1rem; }
+  .ai-perspective-headline em { font-style:italic; color:var(--accent); }
+  .ai-perspective-body { font-size:0.84rem; color:var(--muted); line-height:1.8; margin-bottom:1.2rem; }
+  .pov-item { border-left:3px solid var(--rule); padding-left:1rem; margin-bottom:0.9rem; }
+  .pov-item.accent { border-color:var(--accent); }
+  .pov-title { font-size:0.6rem; letter-spacing:0.14em; text-transform:uppercase; font-weight:600; color:var(--ink); margin-bottom:0.2rem; }
+  .pov-desc { font-size:0.74rem; color:var(--muted); line-height:1.6; }
+
+  /* TESTIMONIAL */
+  .testimonial-strip { background:var(--accent); padding:2rem 2.5rem; display:grid; grid-template-columns:auto 1fr; gap:2rem; align-items:start; border-bottom:3px double var(--ink); }
+  .pull-mark { font-family:'Playfair Display',serif; font-size:6rem; line-height:0.6; color:rgba(255,255,255,0.25); font-weight:900; }
+  .pull-quote { font-family:'Playfair Display',serif; font-size:0.95rem; font-style:italic; font-weight:700; line-height:1.65; margin-bottom:0.6rem; color:#fff; }
+  .pull-attr { font-size:0.65rem; letter-spacing:0.15em; text-transform:uppercase; color:rgba(255,255,255,0.65); font-weight:500; }
+
+  /* FOOTER */
+  footer { background:var(--ink); padding:1.2rem 2.5rem; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; }
+  .footer-name { font-family:'Playfair Display',serif; font-weight:900; font-size:0.9rem; color:rgba(240,243,247,0.8); }
+  .footer-links { display:flex; gap:1.5rem; }
+  .footer-links a { font-size:0.62rem; letter-spacing:0.15em; text-transform:uppercase; color:rgba(240,243,247,0.5); text-decoration:none; }
+  .footer-links a:hover { color:#6b9dfc; }
+  .footer-copy { font-size:0.62rem; color:rgba(240,243,247,0.4); }
+
+  /* ── MOBILE RESPONSIVE ── */
+  @media (max-width: 768px) {
+
+    /* MASTHEAD */
+    .masthead { flex-direction: column; align-items: flex-start; padding: 1rem 1.25rem 0.75rem; gap: 0.5rem; }
+    .masthead-name { font-size: clamp(2.2rem, 12vw, 3.5rem); }
+    .masthead-meta { text-align: left; white-space: normal; }
+
+    /* NAV */
+    nav { padding: 0.5rem 1.25rem; gap: 1rem; flex-wrap: wrap; }
+    nav a { font-size: 0.65rem; }
+    nav .cta { margin-left: 0; }
+
+    /* HERO */
+    .hero { grid-template-columns: 1fr; }
+    .hero-lead { padding: 2rem 1.25rem; border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); }
+    .hero-sidebar { padding: 1.5rem 1.25rem; }
+    .stat-grid { grid-template-columns: 1fr 1fr; }
+
+    /* CAPABILITIES */
+    .capabilities { grid-template-columns: 1fr; }
+    .cap-block { border-right: none !important; border-bottom: 1px solid var(--rule); }
+
+    /* PAGE HEADER */
+    .page-header { grid-template-columns: 1fr; padding: 2rem 1.25rem; gap: 1rem; }
+    .headshot { width: 80px; height: 80px; }
+
+    /* BIO SECTION */
+    .bio-section { grid-template-columns: 1fr; }
+    .bio-left { padding: 1.5rem 1.25rem; border-right: none; border-bottom: 1px solid var(--rule); }
+    .bio-right { padding: 1.25rem; }
+    .proof-strip { grid-template-columns: 1fr 1fr; }
+
+    /* LAYERS */
+    .layers { grid-template-columns: 1fr 1fr; }
+
+    /* SKILLS */
+    .skills-grid { grid-template-columns: 1fr; }
+    .skills-col { border-right: none !important; border-bottom: 1px solid var(--rule); }
+    .skills-col:last-child { border-bottom: none; }
+
+    /* TOOLS */
+    .tools-row { grid-template-columns: 1fr 1fr; }
+    .tools-group { border-right: none !important; border-bottom: 1px solid var(--rule); }
+
+    /* CASE STUDIES */
+    .case-study { grid-template-columns: 1fr; }
+    .cs-left { border-right: none !important; border-bottom: 1px solid var(--rule); padding: 1.5rem 1.25rem; }
+    .cs-right { padding: 1.25rem; }
+    .cs-grid { grid-template-columns: 1fr; }
+    .cs-num { font-size: 2.5rem; }
+
+    /* WORK GRIDS */
+    .work-grid { grid-template-columns: 1fr; }
+    .work-grid-2 { grid-template-columns: 1fr; }
+    .work-card { border-right: none !important; }
+
+    /* FEATURED GRID */
+    .featured-grid { grid-template-columns: 1fr; }
+
+    /* APPROACH */
+    .approach { grid-template-columns: 1fr; }
+    .approach-left { border-right: none; border-bottom: 1px solid var(--rule); }
+
+    /* TESTIMONIALS */
+    .testimonial-pair { grid-template-columns: 1fr; }
+    .testimonial-strip { grid-template-columns: auto 1fr; gap: 1rem; padding: 1.5rem 1.25rem; }
+    .pull-mark { font-size: 4rem; }
+
+    /* AI PERSPECTIVE */
+    .ai-grid { grid-template-columns: 1fr; }
+    .ai-row2 { grid-template-columns: 1fr; }
+    .ai-card { border-right: none !important; border-bottom: 1px solid var(--rule); }
+
+    /* SECTION HEADS */
+    .section-head { padding: 0.8rem 1.25rem; }
+    .section-head h2 { font-size: 0.58rem; }
+
+    /* PAGE HEADERS */
+    .page-header { padding: 1.75rem 1.25rem; }
+    .page-intro { font-size: 0.78rem; }
+
+    /* CTA STRIPS */
+    .cta-strip { flex-direction: column; align-items: flex-start; padding: 1.5rem 1.25rem; gap: 1rem; }
+    .contact-strip { flex-direction: column; align-items: flex-start; padding: 1.5rem 1.25rem; gap: 1rem; }
+
+    /* FOOTER */
+    footer { flex-direction: column; align-items: flex-start; padding: 1.25rem; gap: 0.75rem; }
+
+    /* STICKY NAV */
+    #work-nav { padding: 0.5rem 1rem; }
+
+    /* INLINE GRIDS (style= grids) */
+    [style*="grid-template-columns:1fr 1fr"] { display: block !important; }
+    [style*="grid-template-columns:1.2fr 1fr"] { display: block !important; }
+    [style*="grid-template-columns:1fr 1.8fr"] { display: block !important; }
+    [style*="grid-template-columns:auto 1fr"] { display: block !important; }
+    [style*="grid-template-columns:repeat(4,1fr)"] { display: grid !important; grid-template-columns: 1fr 1fr !important; }
+    [style*="grid-template-columns:repeat(5,1fr)"] { display: grid !important; grid-template-columns: 1fr 1fr !important; }
+    [style*="grid-template-columns:repeat(3,1fr)"] { display: grid !important; grid-template-columns: 1fr !important; }
+
+    /* REPURPOSING FLOW */
+    [style*="display:flex"][style*="align-items:center"][style*="gap:0.5rem"] { flex-wrap: wrap !important; }
+
+    /* GENERAL PADDING */
+    .ai-perspective { padding: 1.5rem 1.25rem; }
+    [style*="padding:2.5rem"] { padding: 1.25rem !important; }
+    [style*="padding:2rem 2.5rem"] { padding: 1.25rem !important; }
+    [style*="padding:1.8rem 2.5rem"] { padding: 1.25rem !important; }
+    [style*="padding:1.5rem 2.5rem"] { padding: 1.25rem !important; }
+    [style*="padding:3rem 2.5rem"] { padding: 1.5rem 1.25rem !important; }
+
+    /* SCREENSHOT */
+    [style*="grid-template-columns:1fr 1.8fr"] > div { margin-bottom: 1rem; }
+  }
+
+  @media (max-width: 480px) {
+    .masthead-name { font-size: 2rem; }
+    .layers { grid-template-columns: 1fr; }
+    .proof-strip { grid-template-columns: 1fr 1fr; }
+    .stat-grid { grid-template-columns: 1fr 1fr; }
+    [style*="grid-template-columns:repeat(4,1fr)"] { grid-template-columns: 1fr 1fr !important; }
+    [style*="grid-template-columns:repeat(5,1fr)"] { grid-template-columns: 1fr !important; }
+    .hero-headline, .page-title { font-size: clamp(1.6rem, 8vw, 2.5rem) !important; }
+    .cs-title { font-size: 1.1rem; }
+  }
 </style>
 </head>
 <body>
+
 <header class="masthead">
   <div class="masthead-name">HEATHER<br><span>Apse</span></div>
   <div class="masthead-meta">
-    <div class="role">B2B SaaS Content Marketing Leader</div>
-    <div class="tagline">SEO → AEO/GEO Content Engines That Drive Pipeline</div>
+    <div class="role">Growth Content Operator · B2B SaaS</div>
+    <div class="tagline">Building content systems that drive organic growth &amp; pipeline</div>
     <div class="avail">✦ Available for hire ✦</div>
   </div>
 </header>
+
 <div class="ticker">
   <div class="ticker-inner">
-    <span>Thought Leadership</span><span>Search &amp; AI Content Strategy (SEO / AEO / GEO)</span><span>Evergreen Growth Content</span><span>Campaign &amp; Lifecycle Content</span><span>Product Led Content Marketing</span>
-    <span>Thought Leadership</span><span>Search &amp; AI Content Strategy (SEO / AEO / GEO)</span><span>Evergreen Growth Content</span><span>Campaign &amp; Lifecycle Content</span><span>Product Led Content Marketing</span>
+    <span>Growth Content Strategy</span><span>SEO + AEO/GEO Systems</span><span>AI-Enabled Content Operations</span><span>Product-Led Storytelling</span><span>Conversion &amp; Messaging</span><span>Cross-Functional Launch Work</span>
+    <span>Growth Content Strategy</span><span>SEO + AEO/GEO Systems</span><span>AI-Enabled Content Operations</span><span>Product-Led Storytelling</span><span>Conversion &amp; Messaging</span><span>Cross-Functional Launch Work</span>
   </div>
 </div>
+
 <nav>
   <a href="work.html">Work</a>
   <a href="about.html">About</a>
   <a href="mailto:heatherapse@gmail.com">Contact</a>
   <a href="mailto:heatherapse@gmail.com" class="cta">Hire Me →</a>
 </nav>
+
+<!-- HERO -->
 <section class="hero">
   <div class="hero-lead">
-    <span class="label">Content strategy &amp; leadership</span>
-    <h1 class="hero-headline">I Turn Content Into<br>a <em>Growth Engine</em><br>for B2B SaaS.</h1>
-    <p class="hero-deck">I'm Heather Apse — a content marketing leader building high-performing systems for B2B SaaS. I bring content optimization, storytelling, and product-led strategy that connect to measurable business outcomes.</p>
-    <a href="work.html" class="btn-read">See my work →</a>
+    <span class="label">Growth Content Operator</span>
+    <h1 class="hero-headline">I turn content into<br><em>compounding growth</em> —<br>for B2B SaaS teams ready to scale.</h1>
+    <p class="hero-deck">I'm the kind of content marketer who loses sleep over internal linking strategy and gets genuinely excited when a content brief comes together. At Tripleseat, I owned the whole thing — SEO architecture, AI workflows, product launches, sales enablement — as the only content person on the team. No hand-holding. No playbook. Just built it.</p>
+    <a href="work.html" class="btn-primary">See my work →</a>
+    <a href="about.html" class="btn-ghost">My approach</a>
   </div>
   <div class="hero-sidebar">
-    <p class="sidebar-bio">I translate complexity into clarity and clarity into growth. I design and write content systems for B2B SaaS companies that connect SEO / AI optimization, product storytelling, and demand generation.</p>
-    <div class="stat-row">
-      <div class="stat"><span class="stat-num">350+</span><span class="stat-label">Published pieces</span></div>
-      <div class="stat"><span class="stat-num">76K+</span><span class="stat-label">Total readers</span></div>
+    <div class="sidebar-label">By the numbers</div>
+    <div class="stat-grid">
+      <div class="stat-box"><span class="stat-num">350+</span><span class="stat-label">Pieces published</span></div>
+      <div class="stat-box"><span class="stat-num">76K+</span><span class="stat-label">Monthly readers</span></div>
+      <div class="stat-box"><span class="stat-num">11%</span><span class="stat-label">Organic YoY growth</span></div>
+      <div class="stat-box"><span class="stat-num">10.85%</span><span class="stat-label">Product launch CVR</span></div>
+      <div class="stat-box" style="grid-column:span 2; background:rgba(107,157,252,0.1);">
+        <span class="stat-num" style="font-size:1.2rem;">Built to thrive in lean, high-growth environments</span>
+        <span class="stat-label">Sole content person on a 14-person team · full-funnel ownership · startup mindset at scale</span>
+      </div>
     </div>
-    <div class="topics">
-      <span class="topic">Content Strategy &amp; Systems</span>
-      <span class="topic">Search (Organic &amp; AI Discovery)</span>
-      <span class="topic">Blog &amp; Editorial Content</span>
-      <span class="topic">Product-Led Content (Web &amp; In-App)</span>
-      <span class="topic">Lifecycle (Email &amp; CRM)</span>
-      <span class="topic">Thought Leadership &amp; Social</span>
-      <span class="topic">Conversion &amp; Sales Enablement</span>
-    </div>
+    <div class="sidebar-label">Core capabilities</div>
+    <ul class="cap-list">
+      <li class="cap-item"><span class="cap-dot"></span>Growth Content Strategy</li>
+      <li class="cap-item"><span class="cap-dot"></span>SEO &amp; Organic Acquisition</li>
+      <li class="cap-item"><span class="cap-dot"></span>AI-Enabled Content Operations</li>
+      <li class="cap-item"><span class="cap-dot"></span>Content Systems &amp; Scaling</li>
+      <li class="cap-item"><span class="cap-dot"></span>Conversion &amp; Messaging</li>
+      <li class="cap-item"><span class="cap-dot"></span>Cross-Functional Launch Work</li>
+    </ul>
   </div>
 </section>
+
+<!-- CAPABILITIES -->
 <div class="section-head">
-  <h2>Selected works</h2>
+  <h2>What I build</h2>
   <div class="section-line"></div>
-  <a href="work.html" class="btn-read">View all →</a>
 </div>
-<section class="articles">
-  <article class="article-card">
-    <div class="article-num">01</div>
-    <div class="article-tag">Blog · Thought Leadership</div>
-    <h3 class="article-title">Why Social Media Shouldn't Be Your Primary Lead Generation Tactic</h3>
-    <p class="article-excerpt">A contrarian take aimed at hospitality operators who over-index on social while leaving higher-intent channels underutilized. Bold opening claim backed by real-world business implications and a narrative arc from assumption to insight to action.</p>
-    <a href="https://tripleseat.com/blog/why-social-media-shouldnt-be-your-primary-lead-generation-tactic/" target="_blank" class="article-link">Read article →</a>
-    <div class="article-meta"><span>Tripleseat</span><span>Blog</span></div>
-  </article>
-  <article class="article-card">
-    <div class="article-num">02</div>
-    <div class="article-tag">Handbook · Demand Gen</div>
-    <h3 class="article-title">The 2026 Event Intelligence Report</h3>
-    <p class="article-excerpt">A data-driven handbook for high-growth venues featuring benchmarks, trend analysis, and actionable growth blueprints. Designed as a premium gated asset to drive lead capture and support demand generation at the top of funnel.</p>
-    <a href="https://info.tripleseat.com/hubfs/Handbooks%202026/TS_Q1%2026_Handbook_%20%20The%202026%20Event%20Intelligence%20Report-%20Data%2c%20Benchmarks%2c%20and%20Blueprints%20for%20High%20Growth%20Venues_V2.pdf?hsLang=en" target="_blank" class="article-link">See handbook →</a>
-    <div class="article-meta"><span>Tripleseat</span><span>Handbook</span></div>
-  </article>
-  <article class="article-card">
-    <div class="article-num">03</div>
-    <div class="article-tag">Case Study · Social Proof</div>
-    <h3 class="article-title">Puttshack Customer Success Story</h3>
-    <p class="article-excerpt">A narrative case study built around a recognizable hospitality brand. Structured to move a skeptical buyer toward confidence — real outcomes, real context, positioned to support both sales enablement and organic credibility.</p>
-    <a href="https://tripleseat.com/success-stories/puttshack/" target="_blank" class="article-link">See case study →</a>
-    <div class="article-meta"><span>Tripleseat</span><span>Case Study</span></div>
-  </article>
-</section>
+<div class="capabilities">
+  <div class="cap-block">
+    <span class="cap-block-icon">⚙️</span>
+    <div class="cap-block-title">Content Systems</div>
+    <div class="cap-block-desc">Scalable editorial workflows, content briefs, repurposing frameworks, and AI-assisted production processes that multiply output without sacrificing quality.</div>
+  </div>
+  <div class="cap-block">
+    <span class="cap-block-icon">📈</span>
+    <div class="cap-block-title">SEO + AEO Growth</div>
+    <div class="cap-block-desc">Pillar-and-cluster architecture, high-intent keyword targeting, entity optimization, and structured content designed to surface in both search and AI-generated answers.</div>
+  </div>
+  <div class="cap-block">
+    <span class="cap-block-icon">🎯</span>
+    <div class="cap-block-title">Conversion &amp; Website Ownership</div>
+    <div class="cap-block-desc">Product pages, landing pages, website copy overhauls, and sales enablement — including A/B testing CTAs, demo forms, and pricing copy to improve conversion performance.</div>
+  </div>
+  <div class="cap-block">
+    <span class="cap-block-icon">🤖</span>
+    <div class="cap-block-title">AI-Powered Operations</div>
+    <div class="cap-block-desc">Prompt frameworks, QA workflows, and human-AI editorial systems that compress production time while maintaining brand integrity and editorial standards.</div>
+  </div>
+  <div class="cap-block">
+    <span class="cap-block-icon">📣</span>
+    <div class="cap-block-title">Thought Leadership</div>
+    <div class="cap-block-desc">Differentiated POVs, executive narratives, and category-building content that positions a brand as the most trusted voice in a crowded SaaS landscape.</div>
+  </div>
+  <div class="cap-block">
+    <span class="cap-block-icon">🚀</span>
+    <div class="cap-block-title">Cross-Functional Launch</div>
+    <div class="cap-block-desc">Integrated product launch campaigns spanning blog, web, email, and sales enablement — aligned with Product, Marketing, and Sales from brief to results.</div>
+  </div>
+</div>
+
+<!-- SELECTED WORK -->
+<div class="section-head dark">
+  <h2>Selected work</h2>
+  <div class="section-line"></div>
+  <a href="work.html" style="font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;font-weight:500;color:rgba(255,255,255,0.7);text-decoration:none;border-bottom:1px solid rgba(255,255,255,0.3);padding-bottom:1px;white-space:nowrap;">View all →</a>
+</div>
+<div class="featured-grid">
+  <div class="featured-card">
+    <div class="card-num">01</div>
+    <div class="card-type">Blog · Thought Leadership</div>
+    <h3 class="card-title">Why Social Media Shouldn't Be Your Primary Lead Generation Tactic</h3>
+    <p class="card-desc">A contrarian POV that cuts through noise for hospitality operators — built around a bold claim, real business implications, and a clear narrative arc from assumption to action.</p>
+    <a href="https://tripleseat.com/blog/why-social-media-shouldnt-be-your-primary-lead-generation-tactic/" target="_blank" class="card-link">Read article →</a>
+    <div class="card-meta"><span>Tripleseat</span><span>Blog</span></div>
+  </div>
+  <div class="featured-card">
+    <div class="card-num">02</div>
+    <div class="card-type">Ebook · Demand Gen</div>
+    <h3 class="card-title">The 2026 Event Intelligence Report</h3>
+    <p class="card-desc">A data-driven ebook for high-growth venues featuring benchmarks, trend analysis, and growth blueprints — designed as a premium gated asset to drive pipeline at the top of funnel.</p>
+    <a href="https://info.tripleseat.com/hubfs/Ebooks%202026/TS_Q1%2026_Ebook_%20%20The%202026%20Event%20Intelligence%20Report-%20Data%2c%20Benchmarks%2c%20and%20Blueprints%20for%20High%20Growth%20Venues_V2.pdf?hsLang=en" target="_blank" class="card-link">See ebook →</a>
+    <div class="card-meta"><span>Tripleseat</span><span>Ebook</span></div>
+  </div>
+  <div class="featured-card">
+    <div class="card-num">03</div>
+    <div class="card-type">Case Study · Social Proof</div>
+    <h3 class="card-title">Puttshack Customer Success Story</h3>
+    <p class="card-desc">A narrative case study structured to move a skeptical buyer toward confidence — real outcomes, real context, designed to support both sales enablement and organic credibility.</p>
+    <a href="https://tripleseat.com/success-stories/puttshack/" target="_blank" class="card-link">See case study →</a>
+    <div class="card-meta"><span>Tripleseat</span><span>Case Study</span></div>
+  </div>
+</div>
+
+<!-- AI PERSPECTIVE -->
+<div class="ai-perspective">
+  <div>
+    <span class="ai-perspective-label">My perspective on AI-era content marketing</span>
+    <h2 class="ai-perspective-headline">The companies that win won't produce the <em>most</em> content — they'll produce the most <em>useful</em> content.</h2>
+    <p class="ai-perspective-body">Here's the uncomfortable truth about AI and content: anyone can now produce more. That means volume is no longer the edge. The companies winning right now are the ones creating content that's genuinely useful, clearly expert, and structured to be found — by both humans and AI answer engines. I use AI to do more of the strategic work, not less of it.</p>
+    <a href="about.html#ai-perspective" style="display:inline-flex;align-items:center;gap:0.4rem;font-size:0.72rem;letter-spacing:0.15em;text-transform:uppercase;font-weight:500;border-bottom:1.5px solid var(--accent);padding-bottom:0.1rem;text-decoration:none;color:var(--accent);">Read my full perspective →</a>
+  </div>
+  <div>
+    <div class="pov-item accent">
+      <div class="pov-title">Quality over volume</div>
+      <div class="pov-desc">Relevance, originality, and business impact — not production volume.</div>
+    </div>
+    <div class="pov-item">
+      <div class="pov-title">SEO + AEO converging</div>
+      <div class="pov-desc">Content must be optimized for both search engines and AI answer engines.</div>
+    </div>
+    <div class="pov-item">
+      <div class="pov-title">AI as force multiplier</div>
+      <div class="pov-desc">Eliminate repetitive tasks — free teams for strategy and storytelling.</div>
+    </div>
+    <div class="pov-item">
+      <div class="pov-title">Content as growth engine</div>
+      <div class="pov-desc">Not a publishing function — a growth function aligned to business outcomes.</div>
+    </div>
+  </div>
+</div>
+
+<!-- TESTIMONIAL -->
+<div style="background:#fff; border-bottom:1px solid var(--ink); padding:2.5rem; display:grid; grid-template-columns:1fr 1fr; gap:3rem; align-items:center;">
+  <div>
+    <div style="font-size:0.62rem; letter-spacing:0.22em; text-transform:uppercase; color:var(--accent); font-weight:500; margin-bottom:0.75rem;">What I'm looking for</div>
+    <h2 style="font-family:'Playfair Display',serif; font-size:1.5rem; font-weight:700; line-height:1.2; margin-bottom:1rem;">I know the role I'm<br>meant to do next.</h2>
+    <p style="font-size:0.86rem; color:var(--muted); line-height:1.8; margin-bottom:1.2rem;">I thrive when there's a content function to build, a search footprint to grow, and a team that moves fast. Growth-stage B2B SaaS is my environment — where strategy and execution aren't two separate jobs, they're the same one.</p>
+    <p style="font-size:0.86rem; color:var(--muted); line-height:1.8;">Everything in this portfolio was built inside one company — and I'd take that over a scattered résumé any day. Depth over breadth. Ownership over cameos.</p>
+  </div>
+  <div style="display:flex; flex-direction:column; gap:0.75rem;">
+    <div style="display:flex; gap:1rem; align-items:flex-start; padding:0.9rem 1.1rem; background:var(--paper); border-left:3px solid var(--accent);">
+      <div>
+        <div style="font-size:0.62rem; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:var(--ink); margin-bottom:0.2rem;">Best fit</div>
+        <div style="font-size:0.78rem; color:var(--muted); line-height:1.6;">Growth-stage B2B SaaS · Series A–C · Building or scaling a content function</div>
+      </div>
+    </div>
+    <div style="display:flex; gap:1rem; align-items:flex-start; padding:0.9rem 1.1rem; background:var(--paper); border-left:3px solid var(--rule);">
+      <div>
+        <div style="font-size:0.62rem; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:var(--ink); margin-bottom:0.2rem;">Roles I'm targeting</div>
+        <div style="font-size:0.78rem; color:var(--muted); line-height:1.6;">Content Marketing Manager · Growth Content Manager · Head of Content</div>
+      </div>
+    </div>
+    <div style="display:flex; gap:1rem; align-items:flex-start; padding:0.9rem 1.1rem; background:var(--paper); border-left:3px solid var(--rule);">
+      <div>
+        <div style="font-size:0.62rem; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:var(--ink); margin-bottom:0.2rem;">What I bring on day one</div>
+        <div style="font-size:0.78rem; color:var(--muted); line-height:1.6;">SEO architecture · content systems · AI workflows · cross-functional alignment</div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div class="testimonial-strip">
-  <div class="pull-quote-mark">"</div>
+  <div class="pull-mark">"</div>
   <div>
-    <p class="pull-quote">Heather balances storytelling and optimization in the most exquisite way. I appreciate her curiosity and skills in the ever-evolving SEO landscape to ensure the brand stands out. From building a content strategy to crafting assets like handbooks, blogs, or pithy infographics, Heather ensures that CTAs speak to the target audience and drive action. She is the epitome of a team player — she navigates the needs of business partners ensuring business alignment, strong collaboration, and positive energy.</p>
-    <p class="pull-attribution">— Lynn Holmlund, VP of Marketing at Tripleseat</p>
-  </div>
-</div>
-<div style="border-bottom:3px double var(--ink); padding:2rem 2.5rem; display:grid; grid-template-columns:1.2fr 1fr; gap:3rem; align-items:start;">
-  <div>
-    <div style="font-size:0.62rem; letter-spacing:0.22em; text-transform:uppercase; color:var(--accent); font-weight:500; margin-bottom:0.75rem;">My perspective on AI-era content marketing</div>
-    <h2 style="font-family:'Playfair Display',serif; font-size:1.6rem; font-weight:700; line-height:1.15; margin-bottom:1rem;">The companies that win won't produce the <em style="font-style:italic; color:var(--accent);">most</em> content. They'll produce the most <em style="font-style:italic; color:var(--accent);">useful</em> content.</h2>
-    <p style="font-size:0.85rem; color:var(--muted); line-height:1.75; margin-bottom:1.2rem;">AI has dramatically lowered the cost of content creation — which means quantity alone is no longer a competitive advantage. The challenge now is creating content that demonstrates expertise, answers real customer questions, and provides value that generic AI-generated content cannot. I view AI as a force multiplier: used thoughtfully, it eliminates repetitive tasks so teams can focus on strategy, storytelling, and optimization.</p>
-    <a href="about.html#ai-perspective" style="display:inline-flex; align-items:center; gap:0.4rem; font-size:0.72rem; letter-spacing:0.15em; text-transform:uppercase; font-weight:500; border-bottom:1.5px solid var(--ink); padding-bottom:0.1rem; text-decoration:none; color:var(--ink);">Read my full perspective →</a>
-  </div>
-  <div style="display:flex; flex-direction:column; gap:0.8rem; padding-top:0.5rem;">
-    <div style="border-left:3px solid var(--accent); padding-left:1rem;">
-      <div style="font-size:0.6rem; letter-spacing:0.14em; text-transform:uppercase; font-weight:500; color:var(--ink); margin-bottom:0.2rem;">Quality over volume</div>
-      <p style="font-size:0.74rem; color:var(--muted); line-height:1.6;">Relevance, originality, and business impact over production volume.</p>
-    </div>
-    <div style="border-left:3px solid var(--rule); padding-left:1rem;">
-      <div style="font-size:0.6rem; letter-spacing:0.14em; text-transform:uppercase; font-weight:500; color:var(--ink); margin-bottom:0.2rem;">SEO + AEO converging</div>
-      <p style="font-size:0.74rem; color:var(--muted); line-height:1.6;">Content must be optimized for both search engines and AI answer engines.</p>
-    </div>
-    <div style="border-left:3px solid var(--rule); padding-left:1rem;">
-      <div style="font-size:0.6rem; letter-spacing:0.14em; text-transform:uppercase; font-weight:500; color:var(--ink); margin-bottom:0.2rem;">Content as a growth engine</div>
-      <p style="font-size:0.74rem; color:var(--muted); line-height:1.6;">Not a publishing function — a growth function aligned to business outcomes.</p>
-    </div>
-    <div style="border-left:3px solid var(--rule); padding-left:1rem;">
-      <div style="font-size:0.6rem; letter-spacing:0.14em; text-transform:uppercase; font-weight:500; color:var(--ink); margin-bottom:0.2rem;">Human expertise is the differentiator</div>
-      <p style="font-size:0.74rem; color:var(--muted); line-height:1.6;">AI accelerates workflows. People remain responsible for strategy, empathy, and creative judgment.</p>
-    </div>
+    <p class="pull-quote">Heather balances storytelling and optimization in the most exquisite way. I appreciate her curiosity and skills in the ever-evolving SEO landscape to ensure the brand stands out. She is the epitome of a team player — she navigates the needs of business partners ensuring business alignment, strong collaboration, and positive energy.</p>
+    <p class="pull-attr">— Lynn Holmlund, VP of Marketing at Tripleseat</p>
   </div>
 </div>
 
@@ -185,5 +441,6 @@
   </div>
   <span class="footer-copy">© 2026 Heather Apse · All rights reserved</span>
 </footer>
+
 </body>
 </html>
