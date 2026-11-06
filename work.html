@@ -230,16 +230,23 @@
   .proof-label { font-size:0.6rem; letter-spacing:0.14em; text-transform:uppercase; color:rgba(240,243,247,0.55); margin-top:0.35rem; }
 
   /* FEATURED / NEW */
-  .featured { display:grid; grid-template-columns:1.05fr 1fr; background:#fff; border-bottom:1px solid var(--ink); }
-  .feat-media { padding:2.5rem; background:#e8ecf2; border-right:1px solid var(--rule); display:flex; flex-direction:column; justify-content:center; gap:0.9rem; }
-  .feat-cover { display:block; position:relative; box-shadow:0 18px 40px rgba(13,27,46,0.22); transition:transform 0.2s, box-shadow 0.2s; }
-  .feat-cover:hover { transform:translateY(-3px); box-shadow:0 24px 48px rgba(13,27,46,0.28); }
-  .feat-cover img { width:100%; height:auto; display:block; aspect-ratio:16/9; object-fit:cover; }
+  .data-intro { background:#fff; padding:2rem 2.5rem 1.75rem; border-bottom:1px solid var(--rule); display:grid; grid-template-columns:1.2fr 1fr; gap:2.5rem; align-items:end; }
+  .data-intro-title { font-family:'Playfair Display',serif; font-size:clamp(1.5rem,3vw,2.1rem); font-weight:900; line-height:1.1; letter-spacing:-0.01em; }
+  .data-intro-title em { font-style:italic; color:var(--accent); }
+  .data-intro p { font-size:0.82rem; color:var(--muted); line-height:1.75; }
+  .featured { display:grid; grid-template-columns:1fr 1fr; background:rgba(13,27,46,0.1); gap:1px; border-bottom:1px solid var(--ink); }
+  .data-card { background:#fff; display:flex; flex-direction:column; }
+  .feat-media { height:300px; background:#e8ecf2; border-bottom:1px solid var(--rule); display:flex; align-items:center; justify-content:center; padding:1.75rem; }
+  .feat-cover { display:block; position:relative; height:100%; box-shadow:0 14px 34px rgba(13,27,46,0.22); transition:transform 0.2s, box-shadow 0.2s; }
+  .feat-cover:hover { transform:translateY(-3px); box-shadow:0 20px 44px rgba(13,27,46,0.28); }
+  .feat-cover img { height:100%; width:auto; max-width:100%; display:block; object-fit:contain; }
   .work-card .work-link { align-self:flex-start; }
-  .feat-badge { position:absolute; top:0.75rem; right:0.75rem; background:var(--accent); color:#fff; font-size:0.56rem; letter-spacing:0.18em; text-transform:uppercase; font-weight:600; padding:0.3rem 0.6rem; }
-  .feat-caption { font-size:0.68rem; color:var(--muted); font-style:italic; line-height:1.6; }
-  .feat-body { padding:2.5rem; display:flex; flex-direction:column; }
-  .feat-body .cs-title { font-size:1.6rem; }
+  .feat-badge { position:absolute; top:0.6rem; right:0.6rem; background:var(--accent); color:#fff; font-size:0.52rem; letter-spacing:0.18em; text-transform:uppercase; font-weight:600; padding:0.25rem 0.5rem; }
+  .feat-kind { display:flex; justify-content:space-between; gap:1rem; font-size:0.56rem; letter-spacing:0.16em; text-transform:uppercase; font-weight:500; margin-bottom:0.5rem; }
+  .feat-kind span:first-child { color:var(--accent); }
+  .feat-kind span:last-child { color:var(--muted); }
+  .feat-body { padding:2rem 2.25rem 2.25rem; display:flex; flex-direction:column; flex:1; }
+  .feat-body .cs-title { font-size:1.45rem; margin-bottom:0.6rem; }
   .feat-stats { display:grid; grid-template-columns:1fr 1fr; gap:1px; background:rgba(13,27,46,0.08); margin:0.25rem 0 1.25rem; }
   .feat-stat { background:#f8f9fb; padding:0.9rem 1rem; border-top:3px solid var(--accent); }
   .feat-stat-num { font-family:'Playfair Display',serif; font-size:1.6rem; font-weight:900; color:var(--accent); line-height:1; }
@@ -266,13 +273,14 @@
 
   @media (max-width: 900px) {
     .featured { grid-template-columns:1fr; }
-    .feat-media { border-right:none; border-bottom:1px solid var(--rule); }
+    .data-intro { grid-template-columns:1fr; gap:0.75rem; }
     .work-grid { grid-template-columns:repeat(2,1fr); }
   }
   @media (max-width: 768px) {
     .proof-bar { grid-template-columns:1fr 1fr; }
-    .feat-media, .feat-body { padding:1.5rem 1.25rem; }
-    .feat-body .cs-title { font-size:1.3rem; }
+    .feat-media { height:220px; padding:1.25rem; }
+    .feat-body, .data-intro { padding:1.5rem 1.25rem; }
+    .feat-body .cs-title { font-size:1.25rem; }
     .filter-bar { padding:0.5rem 1rem; }
     .work-grid { grid-template-columns:1fr; }
   }
@@ -310,39 +318,68 @@
   </div>
 </div>
 
-<!-- FEATURED: NEWEST PIECE -->
-<div class="section-head">
-  <h2>Featured Research</h2>
+<!-- DATA-DRIVEN CONTENT -->
+<div class="section-head dark" id="data-driven">
+  <h2>Data-Driven Content</h2>
   <div class="section-line"></div>
-  <span class="section-sub">Latest addition</span>
+  <span class="section-sub" style="color:rgba(255,255,255,0.5);">Proprietary research turned into pipeline</span>
+</div>
+<div class="data-intro">
+  <h2 class="data-intro-title">What buyers <em>say</em> and what they actually <em>do.</em></h2>
+  <p>Two reports, two kinds of first-party data. One asks consumers what they want from a venue. The other analyzes millions of real bookings made on the Tripleseat platform. Both turn raw numbers into benchmarks venues can act on, stats that earn citations in search and AI answers, and a gated asset that brings in leads.</p>
 </div>
 <div class="featured">
-  <div class="feat-media">
-    <a class="feat-cover" href="https://info.tripleseat.com/hubfs/Handbooks%202025/2025%20Consumer%20Event%20Planning%20Insights%20V5.pdf?hsLang=en" target="_blank" rel="noopener" aria-label="Open the 2025 Consumer Event Planning Insights report (PDF)">
-      <img src="images/consumer-insights-2025-cover.jpg" alt="Cover of Tripleseat's 2025 Consumer Event Planning Insights report" width="1200" height="675" loading="lazy">
-      <span class="feat-badge">New</span>
-    </a>
-    <p class="feat-caption">10-page interactive infographic · Tripleseat · 2025</p>
-  </div>
-  <div class="feat-body">
-    <div class="cs-label">Original Research · Demand Gen</div>
-    <h2 class="cs-title">2025 Consumer Event Planning Insights</h2>
-    <p class="cs-summary">A survey of 500 U.S. consumers, run with Pollfish, on what they want from event venues and the booking experience. It covers event types, seasonality, guest counts, budgets, and how people discover and book venues. Each finding comes with a recommendation a venue operator can act on.</p>
-    <div class="feat-stats">
-      <div class="feat-stat"><div class="feat-stat-num">77%</div><div class="feat-stat-label">say a venue's responsiveness is very or extremely important</div></div>
-      <div class="feat-stat"><div class="feat-stat-num">74%</div><div class="feat-stat-label">prefer using technology for some or all of the booking process</div></div>
-      <div class="feat-stat"><div class="feat-stat-num">87%</div><div class="feat-stat-label">want experiential or interactive elements at their events</div></div>
-      <div class="feat-stat"><div class="feat-stat-num">50%</div><div class="feat-stat-label">plan a bigger budget than for similar past events</div></div>
+  <article class="data-card">
+    <div class="feat-media">
+      <a class="feat-cover" href="https://info.tripleseat.com/hubfs/Handbooks%202025/2025%20Consumer%20Event%20Planning%20Insights%20V5.pdf?hsLang=en" target="_blank" rel="noopener" aria-label="Open the 2025 Consumer Event Planning Insights report (PDF)">
+        <img src="images/consumer-insights-2025-cover.jpg" alt="Cover of Tripleseat's 2025 Consumer Event Planning Insights report" loading="lazy">
+        <span class="feat-badge">New</span>
+      </a>
     </div>
-    <ul class="feat-list">
-      <li><strong>Proprietary data</strong> gives Tripleseat first-party stats to cite, which helps it rank in search and appear in AI answers.</li>
-      <li><strong>Every section links on</strong> to a related blog post or case study, so the report sends readers into the content library.</li>
-      <li><strong>The format is built for skimming:</strong> four sections with persistent side navigation and one question per chart.</li>
-    </ul>
-    <div class="feat-actions">
-      <a href="https://info.tripleseat.com/hubfs/Handbooks%202025/2025%20Consumer%20Event%20Planning%20Insights%20V5.pdf?hsLang=en" target="_blank" rel="noopener" class="cs-link">View the report (PDF) →</a>
+    <div class="feat-body">
+      <div class="feat-kind"><span>Consumer Survey · Infographic</span><span>10 pages · 2025</span></div>
+      <h3 class="cs-title">2025 Consumer Event Planning Insights</h3>
+      <p class="cs-summary">A survey of 500 U.S. consumers, run with Pollfish, on what they want from event venues and the booking experience. It covers event types, seasonality, guest counts, budgets, and how people discover and book venues.</p>
+      <div class="feat-stats">
+        <div class="feat-stat"><div class="feat-stat-num">77%</div><div class="feat-stat-label">say a venue's responsiveness is very or extremely important</div></div>
+        <div class="feat-stat"><div class="feat-stat-num">74%</div><div class="feat-stat-label">prefer using technology for some or all of the booking process</div></div>
+        <div class="feat-stat"><div class="feat-stat-num">87%</div><div class="feat-stat-label">want experiential or interactive elements at their events</div></div>
+        <div class="feat-stat"><div class="feat-stat-num">50%</div><div class="feat-stat-label">plan a bigger budget than for similar past events</div></div>
+      </div>
+      <ul class="feat-list">
+        <li><strong>Every section links on</strong> to a related blog post or case study, so the report sends readers into the content library.</li>
+        <li><strong>The format is built for skimming:</strong> four sections with persistent side navigation and one question per chart.</li>
+      </ul>
+      <div class="feat-actions">
+        <a href="https://info.tripleseat.com/hubfs/Handbooks%202025/2025%20Consumer%20Event%20Planning%20Insights%20V5.pdf?hsLang=en" target="_blank" rel="noopener" class="cs-link">View the report (PDF) →</a>
+      </div>
     </div>
-  </div>
+  </article>
+  <article class="data-card">
+    <div class="feat-media">
+      <a class="feat-cover" href="https://info.tripleseat.com/handbook-the-2026-event-intelligence-report-download-thank-you-page" target="_blank" rel="noopener" aria-label="Open The 2026 Event Intelligence Report">
+        <img src="images/event-intelligence-2026-cover.jpg" alt="Cover of The 2026 Event Intelligence Report: Data, Benchmarks, and Blueprints for High Growth Venues" loading="lazy">
+      </a>
+    </div>
+    <div class="feat-body">
+      <div class="feat-kind"><span>Platform Data · Gated Ebook</span><span>16 pages · 2026</span></div>
+      <h3 class="cs-title">The 2026 Event Intelligence Report</h3>
+      <p class="cs-summary">Benchmarks drawn from Tripleseat's own transaction data on 4.4 million events booked in 2025. It covers pricing, revenue, seasonality, and operations, plus separate plans for restaurants, hotels, and venues.</p>
+      <div class="feat-stats">
+        <div class="feat-stat"><div class="feat-stat-num">4.4M</div><div class="feat-stat-label">events analyzed from Tripleseat platform data</div></div>
+        <div class="feat-stat"><div class="feat-stat-num">$79</div><div class="feat-stat-label">average spend per guest, the new pricing benchmark</div></div>
+        <div class="feat-stat"><div class="feat-stat-num">$3,532</div><div class="feat-stat-label">average revenue per event</div></div>
+        <div class="feat-stat"><div class="feat-stat-num">~15%</div><div class="feat-stat-label">year-over-year growth in off-premise catering</div></div>
+      </div>
+      <ul class="feat-list">
+        <li><strong>Four pillars, each ending in a 2026 prep checklist</strong>, so every benchmark comes with a next step.</li>
+        <li><strong>Product tie-ins built into the advice:</strong> each recommendation points to a Tripleseat feature that delivers it.</li>
+      </ul>
+      <div class="feat-actions">
+        <a href="https://info.tripleseat.com/handbook-the-2026-event-intelligence-report-download-thank-you-page" target="_blank" rel="noopener" class="cs-link">See ebook →</a>
+      </div>
+    </div>
+  </article>
 </div>
 
 <!-- CASE STUDIES -->
@@ -588,15 +625,15 @@
 <div class="section-head dark" id="work-library">
   <h2>Work Library</h2>
   <div class="section-line"></div>
-  <span class="section-sub" style="color:rgba(255,255,255,0.5);">13 pieces across the funnel</span>
+  <span class="section-sub" style="color:rgba(255,255,255,0.5);">11 pieces across the funnel</span>
 </div>
 <div class="filter-bar" role="toolbar" aria-label="Filter work by category">
   <span class="filter-label">Filter</span>
-  <button type="button" class="filter-btn" data-filter="all" aria-pressed="true">All work<span class="count">13</span></button>
+  <button type="button" class="filter-btn" data-filter="all" aria-pressed="true">All work<span class="count">11</span></button>
   <button type="button" class="filter-btn" data-filter="strategy" aria-pressed="false">Thought Leadership<span class="count">3</span></button>
   <button type="button" class="filter-btn" data-filter="seo" aria-pressed="false">SEO &amp; Organic<span class="count">2</span></button>
   <button type="button" class="filter-btn" data-filter="conversion" aria-pressed="false">Conversion<span class="count">3</span></button>
-  <button type="button" class="filter-btn" data-filter="research" aria-pressed="false">Research &amp; Ebooks<span class="count">3</span></button>
+  <button type="button" class="filter-btn" data-filter="ebooks" aria-pressed="false">Ebooks &amp; Guides<span class="count">1</span></button>
   <button type="button" class="filter-btn" data-filter="launch" aria-pressed="false">Launch &amp; Campaigns<span class="count">2</span></button>
 </div>
 <div class="work-grid library" id="library">
@@ -664,24 +701,8 @@
     <a href="https://tripleseat.com/free-beo/" target="_blank" rel="noopener" class="work-link">See page →</a>
     <div class="work-meta">Tripleseat · Landing Page</div>
   </div>
-  <div class="work-card is-new" data-cat="research">
+  <div class="work-card" data-cat="ebooks">
     <div class="work-num">09</div>
-    <div class="work-tag">Original Research · Survey Data<span class="new-pill">NEW</span></div>
-    <h3 class="work-title">2025 Consumer Event Planning Insights</h3>
-    <p class="work-desc">A survey of 500 U.S. consumers presented as a 10-page interactive infographic. It covers what planners book, when, for how many guests, and at what budget. Every section links on to a related blog post or case study.</p>
-    <a href="https://info.tripleseat.com/hubfs/Handbooks%202025/2025%20Consumer%20Event%20Planning%20Insights%20V5.pdf?hsLang=en" target="_blank" rel="noopener" class="work-link">View report →</a>
-    <div class="work-meta">Tripleseat · Research Report</div>
-  </div>
-  <div class="work-card" data-cat="research">
-    <div class="work-num">10</div>
-    <div class="work-tag">Ebook · Demand Gen</div>
-    <h3 class="work-title">The 2026 Event Intelligence Report</h3>
-    <p class="work-desc">Data-driven ebook for high-growth venues featuring benchmarks, trend analysis, and growth blueprints. Premium gated asset to drive lead capture and support demand generation at the top of funnel.</p>
-    <a href="https://info.tripleseat.com/handbook-the-2026-event-intelligence-report-download-thank-you-page" target="_blank" rel="noopener" class="work-link">See ebook →</a>
-    <div class="work-meta">Tripleseat · Ebook</div>
-  </div>
-  <div class="work-card" data-cat="research">
-    <div class="work-num">11</div>
     <div class="work-tag">Ebook · AI Strategy</div>
     <h3 class="work-title">Supercharge Hospitality and Events with AI</h3>
     <p class="work-desc">Practical guide for hospitality operators on adopting AI tools to drive efficiency, personalization, and revenue growth. A strategic resource for teams navigating AI adoption — not a tech primer but a business outcomes playbook.</p>
@@ -689,7 +710,7 @@
     <div class="work-meta">Tripleseat · Ebook</div>
   </div>
   <div class="work-card" data-cat="launch">
-    <div class="work-num">12</div>
+    <div class="work-num">10</div>
     <div class="work-tag">Case Study · Social Proof</div>
     <h3 class="work-title">Puttshack Customer Success Story</h3>
     <p class="work-desc">Narrative case study built around a recognizable hospitality brand. Structured to move a skeptical buyer toward confidence — real outcomes, real context, supporting both sales enablement and organic credibility.</p>
@@ -697,7 +718,7 @@
     <div class="work-meta">Tripleseat · Case Study</div>
   </div>
   <div class="work-card" data-cat="launch">
-    <div class="work-num">13</div>
+    <div class="work-num">11</div>
     <div class="work-tag">Resource · Seasonal Campaign</div>
     <h3 class="work-title">2026 Booking Season Checklist</h3>
     <p class="work-desc">Conversion-focused checklist asset timed to capture intent during peak booking season planning. Drives downloads, supports email campaigns, and nurtures prospects toward a demo as part of a broader demand gen push.</p>
