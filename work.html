@@ -285,6 +285,10 @@
     .filter-bar { padding:0.5rem 1rem; }
     .work-grid { grid-template-columns:1fr; }
   }
+  .work-thumb { display:block; margin:-1.5rem -1.5rem 1.1rem; aspect-ratio:16/9; overflow:hidden; background:#eef1f6; border-bottom:1px solid var(--rule); }
+  .work-thumb img { width:100%; height:100%; display:block; object-fit:cover; transition:transform 0.3s; }
+  .work-thumb.contain img { object-fit:contain; padding:0.9rem 0; }
+  .work-card:hover .work-thumb img { transform:scale(1.03); }
 </style>
 </head>
 <body>
@@ -637,19 +641,21 @@
 <div class="section-head dark" id="work-library">
   <h2>Work Library</h2>
   <div class="section-line"></div>
-  <span class="section-sub" style="color:rgba(255,255,255,0.5);">15 pieces across the funnel · all written by me</span>
+  <span class="section-sub" style="color:rgba(255,255,255,0.5);">16 pieces across the funnel · all written by me</span>
 </div>
 <div class="filter-bar" role="toolbar" aria-label="Filter work by category">
   <span class="filter-label">Filter</span>
-  <button type="button" class="filter-btn" data-filter="all" aria-pressed="true">All work<span class="count">15</span></button>
+  <button type="button" class="filter-btn" data-filter="all" aria-pressed="true">All work<span class="count">16</span></button>
   <button type="button" class="filter-btn" data-filter="strategy" aria-pressed="false">Thought Leadership<span class="count">3</span></button>
   <button type="button" class="filter-btn" data-filter="seo" aria-pressed="false">SEO &amp; Organic<span class="count">3</span></button>
-  <button type="button" class="filter-btn" data-filter="conversion" aria-pressed="false">Conversion<span class="count">3</span></button>
+  <button type="button" class="filter-btn" data-filter="conversion" aria-pressed="false">Conversion<span class="count">2</span></button>
   <button type="button" class="filter-btn" data-filter="ebooks" aria-pressed="false">Ebooks &amp; Guides<span class="count">3</span></button>
-  <button type="button" class="filter-btn" data-filter="launch" aria-pressed="false">Launch &amp; Campaigns<span class="count">3</span></button>
+  <button type="button" class="filter-btn" data-filter="launch" aria-pressed="false">Launch &amp; Campaigns<span class="count">2</span></button>
+  <button type="button" class="filter-btn" data-filter="sales" aria-pressed="false">Sales Enablement<span class="count">3</span></button>
 </div>
 <div class="work-grid library" id="library">
   <div class="work-card" data-cat="strategy">
+    <a class="work-thumb cover" href="https://tripleseat.com/blog/why-social-media-shouldnt-be-your-primary-lead-generation-tactic/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="https://tripleseat.com/wp-content/uploads/2026/06/ChatGPT-Image-Sep-11-2025-04_47_04-PM.png" alt="" loading="lazy" onerror="this.parentNode.style.display='none'"></a>
     <div class="work-num">01</div>
     <div class="work-tag">Thought Leadership · Contrarian POV</div>
     <h3 class="work-title">Why Social Media Shouldn't Be Your Primary Lead Generation Tactic</h3>
@@ -658,6 +664,7 @@
     <div class="work-meta">Tripleseat · Thought Leadership</div>
   </div>
   <div class="work-card" data-cat="strategy">
+    <a class="work-thumb cover" href="https://tripleseat.com/blog/4-reasons-events-are-recession-proofing-hospitality-businesses/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="https://tripleseat.com/wp-content/uploads/2026/06/4-Reasons-Events-Are-Recession-Proofing-Hospitality-Businesses.png" alt="" loading="lazy" onerror="this.parentNode.style.display='none'"></a>
     <div class="work-num">02</div>
     <div class="work-tag">Thought Leadership · Market Trends</div>
     <h3 class="work-title">Navigating Today's Economy: How Events Can Recession-Proof Your Business</h3>
@@ -666,6 +673,7 @@
     <div class="work-meta">Tripleseat · Thought Leadership</div>
   </div>
   <div class="work-card" data-cat="strategy">
+    <a class="work-thumb cover" href="https://www.hospitalityupgrade.com/blog/become-the-smart-sidekick-for-planners-how-to-use-data-that-thinks-ahead" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="https://www.hospitalityupgrade.com/cdn-cgi/image/format=jpeg,gravity=face,fit=crop,width=1200,height=630/https://hospitalityupgrade-csp.nyc3.digitaloceanspaces.com/articles/91916271-7a15-403c-94e0-88711e5095f7/featured_image/68dc3ebb54f4948d4b86d1bf_tripleseat.png" alt="" loading="lazy" onerror="this.parentNode.style.display='none'"></a>
     <div class="work-num">03</div>
     <div class="work-tag">Guest Post · 🎥 Video Component</div>
     <h3 class="work-title">Become the Smart Sidekick for Planners: How to Use Data That Thinks Ahead</h3>
@@ -674,6 +682,7 @@
     <div class="work-meta">Hospitality Upgrade · Guest Post</div>
   </div>
   <div class="work-card" data-cat="seo">
+    <a class="work-thumb cover" href="https://tripleseat.com/blog/event-management-software-a-comprehensive-guide-for-restaurants-hotels-and-unique-hospitality-venues/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="https://tripleseat.com/wp-content/uploads/2026/06/Event-Management-Software-A-Comprehensive-Guide-for-Restaurants-Hotels-and-Unique-Hospitality-Venues.jpg" alt="" loading="lazy" onerror="this.parentNode.style.display='none'"></a>
     <div class="work-num">04</div>
     <div class="work-tag">SEO Pillar · Organic Acquisition</div>
     <h3 class="work-title">Event Management Software: A Comprehensive Guide</h3>
@@ -682,6 +691,7 @@
     <div class="work-meta">Tripleseat · SEO Pillar</div>
   </div>
   <div class="work-card" data-cat="seo">
+    <a class="work-thumb cover" href="https://tripleseat.com/blog/understanding-the-hotel-industrys-most-critical-kpis-and-leveraging-data-to-succeed/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="https://tripleseat.com/wp-content/uploads/2026/06/The-Hotel-Industrys-Most-Critical-KPIs.jpg" alt="" loading="lazy" onerror="this.parentNode.style.display='none'"></a>
     <div class="work-num">05</div>
     <div class="work-tag">SEO Pillar · Hospitality KPIs</div>
     <h3 class="work-title">Hotel KPIs You Need to Track</h3>
@@ -690,6 +700,7 @@
     <div class="work-meta">Tripleseat · SEO Pillar</div>
   </div>
   <div class="work-card" data-cat="seo">
+    <a class="work-thumb cover" href="https://tripleseat.com/articles/the-art-of-catering-pricing-how-to-balance-costs-value-and-profit/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="https://tripleseat.com/wp-content/uploads/2026/06/The-Art-of-Catering-Pricing-How-to-Balance-Costs-Value-and-Profit.jpg" alt="" loading="lazy" onerror="this.parentNode.style.display='none'"></a>
     <div class="work-num">06</div>
     <div class="work-tag">SEO Guide · Evergreen How-To</div>
     <h3 class="work-title">Catering Pricing Guide: How to Balance Costs, Value, and Profit</h3>
@@ -698,15 +709,8 @@
     <div class="work-meta">Tripleseat · SEO Guide</div>
   </div>
   <div class="work-card" data-cat="conversion">
+    <a class="work-thumb contain" href="https://tripleseat.com/products/restaurants/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="https://tripleseat.com/wp-content/uploads/2026/07/Industry-Restaurants-1022x1024.png" alt="" loading="lazy" onerror="this.parentNode.style.display='none'"></a>
     <div class="work-num">07</div>
-    <div class="work-tag">Product-Led · Automation</div>
-    <h3 class="work-title">Automation in Action: A Deep Dive into Lead Management</h3>
-    <p class="work-desc">Deep-dive into how the Tripleseat lead management ecosystem uses automation to eliminate bottlenecks, accelerate response velocity, and convert more inquiries into revenue. Positions automation as a competitive necessity.</p>
-    <a href="https://tripleseat.com/blog/everything-you-need-to-know-about-the-tripleseat-lead-form/" target="_blank" rel="noopener" class="work-link">Read article →</a>
-    <div class="work-meta">Tripleseat · Product-Led</div>
-  </div>
-  <div class="work-card" data-cat="conversion">
-    <div class="work-num">08</div>
     <div class="work-tag">Product Page · Web Copy</div>
     <h3 class="work-title">Tripleseat for Restaurants — Product Page</h3>
     <p class="work-desc">Conversion-focused product page positioning Tripleseat for restaurant operators. Balances clarity and persuasion — aligning platform features to audience pain points and guiding visitors toward a demo.</p>
@@ -714,7 +718,8 @@
     <div class="work-meta">Tripleseat · Product Page</div>
   </div>
   <div class="work-card" data-cat="conversion">
-    <div class="work-num">09</div>
+    <a class="work-thumb cover" href="https://tripleseat.com/free-beo/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="https://tripleseat.com/wp-content/uploads/2026/07/Frame-5@2x-768x432-1.png" alt="" loading="lazy" onerror="this.parentNode.style.display='none'"></a>
+    <div class="work-num">08</div>
     <div class="work-tag">Landing Page · Lead Gen</div>
     <h3 class="work-title">Free BEO Template — Lead Gen Page</h3>
     <p class="work-desc">High-intent lead generation page built around a free Banquet Event Order template — a search-driven asset targeting venue operators at the moment they need it most. Combines utility content with a clear conversion path.</p>
@@ -722,7 +727,8 @@
     <div class="work-meta">Tripleseat · Landing Page</div>
   </div>
   <div class="work-card" data-cat="ebooks">
-    <div class="work-num">10</div>
+    <a class="work-thumb contain" href="https://info.tripleseat.com/handbook-supercharge-hospitality-and-events-with-artificial-intelligence-2025-download-thank-you-page" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="https://info.tripleseat.com/hs-fs/hubfs/Supercharge%20Hospitality%20and%20Events%20with%20Artificial%20Intelligence%20Cover%20Thumbnail.png?width=400" alt="" loading="lazy" onerror="this.parentNode.style.display='none'"></a>
+    <div class="work-num">09</div>
     <div class="work-tag">Ebook · AI Strategy</div>
     <h3 class="work-title">Supercharge Hospitality and Events with AI</h3>
     <p class="work-desc">Practical guide for hospitality operators on adopting AI tools to drive efficiency, personalization, and revenue growth. A strategic resource for teams navigating AI adoption — not a tech primer but a business outcomes playbook.</p>
@@ -730,7 +736,8 @@
     <div class="work-meta">Tripleseat · Ebook</div>
   </div>
   <div class="work-card" data-cat="ebooks">
-    <div class="work-num">11</div>
+    <a class="work-thumb contain" href="https://info.tripleseat.com/ultimate-guide-3d-floorplanning-technology" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="https://info.tripleseat.com/hs-fs/hubfs/TS_Floorplans%20Handbook_Thumbnail.png?width=400" alt="" loading="lazy" onerror="this.parentNode.style.display='none'"></a>
+    <div class="work-num">10</div>
     <div class="work-tag">Ebook · Product Launch</div>
     <h3 class="work-title">The Ultimate Guide to Revolutionizing Event Management with 3D Floorplanning Technology</h3>
     <p class="work-desc">The launch ebook for Tripleseat Floorplans. Explains how 3D floorplans help venues sell and plan events, how to choose floorplan software, and how visualization speeds up the sales cycle and improves the client experience.</p>
@@ -738,7 +745,8 @@
     <div class="work-meta">Tripleseat · Ebook</div>
   </div>
   <div class="work-card" data-cat="ebooks">
-    <div class="work-num">12</div>
+    <a class="work-thumb contain" href="https://info.tripleseat.com/handbook-the-hidden-revenue-leak-a-restaurant-leaders-guide-to-recovering-profit-and-streamlining-private-dining" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="https://info.tripleseat.com/hs-fs/hubfs/The%20Hidden%20Revenue%20Leak%20Handbook%20US%20Cover%20Thumbnail.png?width=400" alt="" loading="lazy" onerror="this.parentNode.style.display='none'"></a>
+    <div class="work-num">11</div>
     <div class="work-tag">Ebook · Executive Audience</div>
     <h3 class="work-title">The Hidden Revenue Leak: A Restaurant Leader's Guide to Recovering Profit and Streamlining Private Dining</h3>
     <p class="work-desc">A guide for restaurant leaders on where private dining revenue slips away when events run through systems built for regular service: admin time, unbilled add-ons, and chargebacks. Frames the fix in terms of profit, not features.</p>
@@ -746,15 +754,8 @@
     <div class="work-meta">Tripleseat · Ebook</div>
   </div>
   <div class="work-card" data-cat="launch">
-    <div class="work-num">13</div>
-    <div class="work-tag">Case Study · Social Proof</div>
-    <h3 class="work-title">Puttshack Customer Success Story</h3>
-    <p class="work-desc">Narrative case study built around a recognizable hospitality brand. Structured to move a skeptical buyer toward confidence — real outcomes, real context, supporting both sales enablement and organic credibility.</p>
-    <a href="https://tripleseat.com/success-stories/puttshack/" target="_blank" rel="noopener" class="work-link">See case study →</a>
-    <div class="work-meta">Tripleseat · Case Study</div>
-  </div>
-  <div class="work-card" data-cat="launch">
-    <div class="work-num">14</div>
+    <a class="work-thumb contain" href="https://info.tripleseat.com/2026-booking-season-checklist-for-event-venues-thank-you" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="https://info.tripleseat.com/hs-fs/hubfs/TS_26_Handbook_The%20Booking%20Season%20Readiness%20Checklist%20for%20Event%20Venues.jpg?width=400" alt="" loading="lazy" onerror="this.parentNode.style.display='none'"></a>
+    <div class="work-num">12</div>
     <div class="work-tag">Resource · Seasonal Campaign</div>
     <h3 class="work-title">2026 Booking Season Checklist</h3>
     <p class="work-desc">Conversion-focused checklist asset timed to capture intent during peak booking season planning. Drives downloads, supports email campaigns, and nurtures prospects toward a demo as part of a broader demand gen push.</p>
@@ -762,12 +763,40 @@
     <div class="work-meta">Tripleseat · Campaign Asset</div>
   </div>
   <div class="work-card" data-cat="launch">
-    <div class="work-num">15</div>
+    <a class="work-thumb cover" href="https://tripleseat.com/blog/tips-for-maximizing-event-layouts-how-tripleseat-floorplans-optimizes-event-space/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="https://tripleseat.com/wp-content/uploads/2026/06/Event-Logistics-How-Floorplanning-Technology-Improves-Events-at-Your-Venue-from-Concept-to-Execution.png" alt="" loading="lazy" onerror="this.parentNode.style.display='none'"></a>
+    <div class="work-num">13</div>
     <div class="work-tag">Launch Campaign · Blog Series</div>
     <h3 class="work-title">Tips for Maximizing Event Layouts: How Floorplans by Tripleseat Optimizes Event Space</h3>
     <p class="work-desc">Part of the Floorplans launch blog series. A practical how-to on planning event layouts with the new product (measurements, reusable templates, color-coding, sharing, and post-event reviews) that keeps launch momentum going by showing customers how to get value from it.</p>
     <a href="https://tripleseat.com/blog/tips-for-maximizing-event-layouts-how-tripleseat-floorplans-optimizes-event-space/" target="_blank" rel="noopener" class="work-link">Read article →</a>
     <div class="work-meta">Tripleseat · Launch Campaign</div>
+  </div>
+  <div class="work-card" data-cat="sales">
+    <a class="work-thumb cover" href="https://tripleseat.com/articles/credit-card-processing-for-events-understanding-card-present-vs-card-not-present-rates/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="https://tripleseat.com/wp-content/uploads/2026/06/Credit-Card-Processing-for-Events-AI-Generated-Gemini-02092026.png" alt="" loading="lazy" onerror="this.parentNode.style.display='none'"></a>
+    <div class="work-num">14</div>
+    <div class="work-tag">Sales Enablement · Objection Handling</div>
+    <h3 class="work-title">Credit Card Processing for Events: Understanding Card-Present vs. Card-Not-Present Rates</h3>
+    <p class="work-desc">Answers a pricing objection prospects raise in sales calls: why event payment rates differ from POS rates. Explains how card networks set rates in plain language, with a comparison table and key takeaways, then makes the ROI case for Tripleseat PartyPay.</p>
+    <a href="https://tripleseat.com/articles/credit-card-processing-for-events-understanding-card-present-vs-card-not-present-rates/" target="_blank" rel="noopener" class="work-link">Read article →</a>
+    <div class="work-meta">Tripleseat · Sales Enablement</div>
+  </div>
+  <div class="work-card" data-cat="sales">
+    <a class="work-thumb contain" href="https://tripleseat.com/case-studies/puttshack/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="https://tripleseat.com/wp-content/uploads/2026/06/puttshack-2.jpg" alt="" loading="lazy" onerror="this.parentNode.style.display='none'"></a>
+    <div class="work-num">15</div>
+    <div class="work-tag">Case Study · Social Proof</div>
+    <h3 class="work-title">Puttshack Customer Success Story</h3>
+    <p class="work-desc">Narrative case study built around a recognizable hospitality brand. Structured to move a skeptical buyer toward confidence — real outcomes, real context, supporting both sales enablement and organic credibility.</p>
+    <a href="https://tripleseat.com/case-studies/puttshack/" target="_blank" rel="noopener" class="work-link">See case study →</a>
+    <div class="work-meta">Tripleseat · Case Study</div>
+  </div>
+  <div class="work-card" data-cat="sales">
+    <a class="work-thumb cover" href="https://tripleseat.com/blog/everything-you-need-to-know-about-the-tripleseat-lead-form/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="https://tripleseat.com/wp-content/uploads/2026/03/4-Creative-Ways-to-Use-Your-Tripleseat-Lead-Form-Link.webp" alt="" loading="lazy" onerror="this.parentNode.style.display='none'"></a>
+    <div class="work-num">16</div>
+    <div class="work-tag">Product-Led · Automation</div>
+    <h3 class="work-title">Automation in Action: A Deep Dive into Lead Management</h3>
+    <p class="work-desc">Deep-dive into how the Tripleseat lead management ecosystem uses automation to eliminate bottlenecks, accelerate response velocity, and convert more inquiries into revenue. Positions automation as a competitive necessity.</p>
+    <a href="https://tripleseat.com/blog/everything-you-need-to-know-about-the-tripleseat-lead-form/" target="_blank" rel="noopener" class="work-link">Read article →</a>
+    <div class="work-meta">Tripleseat · Product-Led</div>
   </div>
 </div>
 
